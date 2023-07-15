@@ -1,0 +1,10 @@
+from gpiozero import DistanceSensor
+from gpiozero import Led
+from time import sleep
+led = Led(2)
+sensor = DistanceSensor(17,27)
+while True :
+    if sensor.distance * 100 == 10 :   
+        led.on()
+    else:
+        led.off()
